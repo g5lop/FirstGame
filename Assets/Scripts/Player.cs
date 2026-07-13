@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public static Player Instance { get; private set; }
 
     [SerializeField] private float movingSpeed = 10f;
 
@@ -15,6 +16,7 @@ public class Player : MonoBehaviour
 
     private void Awake()
     {
+        Instance = this;
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -37,6 +39,12 @@ public class Player : MonoBehaviour
         {
             isRunnig = false;
         }
+    }
+
+    public bool IsRunnig()
+    {
+        return isRunnig;
+
     }
 
 }

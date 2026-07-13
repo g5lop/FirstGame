@@ -4,6 +4,8 @@ public class PlayerVisual : MonoBehaviour
 {
     private Animator animator;
 
+    private const string IS_RUNNING = "IsRunning";
+
     private void Awake()
     {
         animator = GetComponent<Animator>();
@@ -11,6 +13,6 @@ public class PlayerVisual : MonoBehaviour
 
     private void Update()
     {
-        
+        animator.SetBool(IS_RUNNING, Player.Instance.IsRunnig());
     }
 }

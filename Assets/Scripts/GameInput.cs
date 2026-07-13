@@ -6,6 +6,8 @@ public class GameInput : MonoBehaviour
 
     private PlayerInputActions playerInputActions;
 
+    private 
+
     private void Awake()
     {
         Instance = this;
@@ -22,4 +24,8 @@ public class GameInput : MonoBehaviour
         return inputVector;
     }
 
+    public Vector3 GetMousePosition()
+    {
+
+    }
 }
